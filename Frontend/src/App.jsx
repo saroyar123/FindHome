@@ -1,34 +1,44 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './component/Navber/Navbar'
+import Search from './component/Search/Search'
+import { useDispatch } from 'react-redux'
+import { getAllPropertyAction } from './Action/propertyAction'
+import Home from './component/Home/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import SignUp from './component/SignUp/SignUp'
+import Login from './component/Login/Login'
+import Account from './component/Account/Account'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isToken, setIsToken] = useState(null)
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllPropertyAction());
+    const token = sessionStorage.getItem("token");
+    setIsToken(token)
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        {
+          isToken == null ?
+            <>
+              <Route path='/signup' element={<SignUp />} />
+              <Route path='/login' element={<Login />} />
+            </>:
+            <>
+            <Route path='/account' element={<Account/>}/>
+            </>
+        }
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

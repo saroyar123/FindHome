@@ -1,0 +1,59 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    background-color: rgb(177, 172, 172);
+    position: sticky;
+    padding: 10px;
+    border: 2px solid rgb(150, 145, 145);
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 100px;
+}
+.left h2{
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.left a{
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    background-color:rgb(155, 143, 143);
+    padding: 5px 10px;
+    border: 1px solid rgb(118, 106, 106);
+    border-radius: 10px;
+}
+
+.left a:hover{
+    font-size: 20px;
+    background-color:rgb(133, 103, 103) ;
+}
+
+
+.right{
+    position: absolute;
+    right: 100px;
+}
+
+.right a{
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    background-color:rgb(132, 164, 180);
+    padding: 5px 10px;
+    margin: 5px 10px;
+    border: 1px solid rgb(99, 135, 152);
+    border-radius: 10px;
+
+}
+
+.right a:hover{
+    font-size: 20px;
+    background-color:rgb(149, 168, 180) ;
+}
+

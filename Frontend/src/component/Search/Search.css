@@ -1,0 +1,33 @@
+.search{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 60px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(177, 172, 172);
+    justify-content: center;
+
+}
+
+.search div{
+    width: 200px;
+    margin: 20px 30px;
+    border-right: 2px solid rgb(90, 89, 89);
+}
+
+.search div h4{
+    margin-bottom: 5px;
+}
+
+.search button{
+    padding: 5px 15px;
+    background-color: darkcyan;
+    height: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.search button:hover{
+    padding: 7px 20px;
+}

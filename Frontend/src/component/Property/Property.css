@@ -1,0 +1,53 @@
+.property{
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    margin: 20px 60px;
+    overflow: hidden;
+    background-color: rgb(187, 187, 187);
+}
+
+.image{
+    background-color: rgb(131, 126, 126);
+    height:250px;
+    
+}
+.price{
+    padding: 0px 20px;
+}
+
+.price h2{
+   color: rgb(8, 82, 106);
+   padding: 5px 0px;
+}
+
+.price h2 span{
+    font-size: 20px;
+    color: black;
+}
+
+.price h3{
+    font-size: 25px;
+    padding-top: 5px;
+}
+.price h4{
+    font-size: 15px;
+    color: rgb(90, 82, 82);
+    padding-bottom: 5px;
+}
+
+.bordered{
+  border: 1px solid rgb(90, 82, 82);
+}
+
+
+
+.details{
+  padding: 0px 20px;
+  padding-top: 5px;
+}
+
+.details span{
+    padding-right: 30px;
+    
+}
