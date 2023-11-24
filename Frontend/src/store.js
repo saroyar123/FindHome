@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { allProperty } from "./Reducer/property";
+import { allProperty, userInfo } from "./Reducer/property";
 
 const store=configureStore({
     reducer:{
-        allProperty:allProperty
+        allProperty:allProperty,
+        userInfo:userInfo
     }
 })
 

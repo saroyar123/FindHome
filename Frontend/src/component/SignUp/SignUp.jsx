@@ -18,7 +18,7 @@ const SignUp = () => {
     <div className='signup'>
         {
             isSignup?<>
-            <div>
+            <div className='login_now'>
                 <h1>Please login now</h1>
                 <Link to={"/login"}>Login</Link>
             </div>

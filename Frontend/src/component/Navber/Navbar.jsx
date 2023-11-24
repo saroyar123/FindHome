@@ -24,7 +24,7 @@ const
 
                             </> :
                             <>
-                                <Link>Account</Link>
+                                <Link to={"/account"}>Account</Link>
                             </>
                     }
 

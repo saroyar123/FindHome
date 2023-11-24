@@ -117,7 +117,11 @@ exports.getAllApartmentOfAuthUser = async (req, res) => {
       success: true,
       response: {
         message: "get all data successfully",
-        data: apartments,
+        data: {
+          user:req.user,
+          apartments:apartments
+        }
+        
       },
     });
   } catch (error) {

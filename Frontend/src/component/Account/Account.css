@@ -1,0 +1,35 @@
+.Property_Box{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+
+}
+
+.user_Info{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: rgb(187, 187, 187);
+    margin: 20px 60px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.user_Info button{
+    right: 0px;
+    height: 30px;
+    padding: 5px 10px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.user_Info button:hover{
+    font-size: 15px;
+}
+
+.main_box h2{
+    margin: 10px 60px;
+    border-bottom: 2px solid rgb(111, 104, 104);
+
+}
