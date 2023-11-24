@@ -20,6 +20,6 @@ app.get("/",(req,res)=>{
 })
 app.use("/api",userRouter)
 app.use("/api",apartmentRouter)
-app.listen(4000,()=>{
+app.listen(process.env.port,()=>{
     console.log("server is runnig")
 })
