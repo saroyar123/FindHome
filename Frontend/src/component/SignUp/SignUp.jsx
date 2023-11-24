@@ -11,7 +11,8 @@ const SignUp = () => {
     const [isSignup,setIsSignUp]=useState(false)
     const signUpHandler= async(e)=>{
         e.preventDefault();
-        const {data}=await axios.post("http://localhost:4000/api/signup",{name,email,password})
+        // http://localhost:4000
+        const {data}=await axios.post("https://ventvilla-backend.onrender.com/api/signup",{name,email,password})
         setIsSignUp(true)
     }
   return (

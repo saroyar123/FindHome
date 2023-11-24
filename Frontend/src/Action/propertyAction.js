@@ -7,7 +7,8 @@ export const getAllPropertyAction=()=>async(dispatch)=>{
             type:"getAllPropertyRequest"
         })
         
-        const {data}=await axios.get("http://localhost:4000/api/list-properties");
+        // http://localhost:4000
+        const {data}=await axios.get("https://ventvilla-backend.onrender.com/api/list-properties");
         dispatch({
             type:"getAllPropertySuccess",
             payload:data
@@ -28,7 +29,8 @@ try {
         type:"getUserInfoRequest"
     })
     
-    const {data}=await axios.get("http://localhost:4000/api/property",{
+    // http://localhost:4000
+    const {data}=await axios.get("https://ventvilla-backend.onrender.com/api/property",{
         headers:{
             'Authorization': `Bearer ${token}`,
         }
